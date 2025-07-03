@@ -6,7 +6,7 @@ function createHeart() {
   if (t > Math.PI * 2) return;
 
   const x = 16 * Math.pow(Math.sin(t), 3);
-  const y = 
+  const y =
     13 * Math.cos(t) -
     5 * Math.cos(2 * t) -
     2 * Math.cos(3 * t) -
@@ -15,12 +15,12 @@ function createHeart() {
   const heart = document.createElement('div');
   heart.className = 'heart';
   heart.style.left = `${x * 14 + 230}px`;
-  heart.style.top = `${-y * 14 + 250}px`; // inverte y para posicionar corretamente
+  heart.style.top = `${-y * 14 + 250}px`;
 
   container.appendChild(heart);
 
   t += 0.1;
-  setTimeout(createHeart, 20); // menor tempo entre os corações
+  setTimeout(createHeart, 20);
 }
 
 createHeart();
